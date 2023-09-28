@@ -4,7 +4,6 @@
 // function.
 // Execute `starklings hint move_semantics4` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 use array::ArrayTrait;
 use array::ArrayTCloneImpl;
 use array::SpanTrait;
@@ -25,7 +24,7 @@ fn main() {
 
 // `fill_arr()` should no longer takes `arr: Array<felt252>` as argument
 fn fill_arr(arr: Array<felt252>) -> Array<felt252> {
-    let mut arr = arr;
+    let mut arr = ArrayTrait::<felt252>::new();
 
     arr.append(22);
     arr.append(44);
